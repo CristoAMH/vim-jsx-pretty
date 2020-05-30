@@ -121,10 +121,11 @@ exe 'syntax match jsxComponentName
       \ ' .(s:highlight_close_tag ? 'transparent' : '')
 
 " MyComponent.PropType
-syntax match jsxComponentNamePropTypes +^[A-Z][A-Za-z0-9]*(?=\.propTypes)+
+" syntax match jsxComponentNamePropTypes +^[A-Z][A-Za-z0-9]*(?=\.propTypes)+
+syntax match jsxComponentNamePropTypes +^[A-Z][A-Za-z0-9].propTypes+
 " <tag key={this.props.key}>
 "  ~~~
-exe 'syntax match jsxTagName
+exe 'syntax match jsxTagNÇme
       \ +\<[-:._$A-Za-z0-9]\+\>+
       \ contained
       \ contains=jsxComponentName,jsxDot,jsxNamespace
