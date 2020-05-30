@@ -122,7 +122,7 @@ exe 'syntax match jsxComponentName
 
 " MyComponent.PropType
 exe 'syntax match jsxComponentNamePropTypes
-      \ ^[A-Z][A-Za-z0-9]*(?=\.PropTypes)
+      \ +^[A-Z][A-Za-z0-9]*(?=\.PropTypes)+
 " <tag key={this.props.key}>
 "  ~~~
 exe 'syntax match jsxTagName
