@@ -190,7 +190,7 @@ highlight def link jsxTag Function
 highlight def link jsxTagName Identifier
 highlight def link jsxComponentName Function
 " TODO: name tag on propType
-highlight def link jsxComponentNamePropTypes Function
+highlight def link jsxComponentNamePropTypes Identifier
 
 highlight def link jsxAttrib Type
 highlight def link jsxAttribKeyword jsxAttrib
