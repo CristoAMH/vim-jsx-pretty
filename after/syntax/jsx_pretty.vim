@@ -121,7 +121,9 @@ exe 'syntax match jsxComponentName
       \ ' .(s:highlight_close_tag ? 'transparent' : '')
 
 " MyComponent.PropType
- syntax match jsxComponentNamePropTypes +[A-Z][A-Za-z0-9]*\ze.propTypes+
+ "syntax match jsxComponentNamePropTypes +[A-Z][A-Za-z0-9]*\ze.propTypes+
+
+ syntax match jsonObject +[A-Z][A-Za-z0-9]*\ze\.+
 " <tag key={this.props.key}>
 "  ~~~
 exe 'syntax match jsxTagName
@@ -190,7 +192,9 @@ highlight def link jsxTag Function
 highlight def link jsxTagName Identifier
 highlight def link jsxComponentName Function
 " TODO: name tag on propType
-highlight def link jsxComponentNamePropTypes Identifier
+"Identifier:azul
+"highlight def link jsxComponentNamePropTypes Identifier
+highlight def link jsonObject jsxAttrib
 
 highlight def link jsxAttrib Type
 highlight def link jsxAttribKeyword jsxAttrib
