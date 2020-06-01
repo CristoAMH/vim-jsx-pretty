@@ -124,7 +124,7 @@ exe 'syntax match jsxComponentName
  syntax match classObject +\<[A-Z][A-Za-z0-9]*\ze\.+
  syntax match objectPropertiesChain +\v(<[a-z][A-Za-z]*)*\.([a-z]\w*)>\(@!+
  syntax match objectHighlight +\v\zs\{.*\}+
- syntax match objectProperies +\v<[a-z]\w*:\ze\s+ containedin=objectHighlight
+ syntax match objectPropertiesName +\v<[a-z]\w*:\ze\s+ containedin=objectHighlight
 " <tag key={this.props.key}>
 "  ~~~
 exe 'syntax match jsxTagName
@@ -196,7 +196,8 @@ highlight def link jsxComponentName Funtion
 "Identifier:azul
 "highlight def link jsxComponentNamePropTypes Identifier
 highlight def link componentNamePropTypes jsxAttrib
-highlight def link objectProperties Identifier
+highlight def link objectPropertiesChain Identifier
+highlight def link o Identifier
 
 highlight def link jsxAttrib Type
 highlight def link jsxAttribKeyword jsxAttrib
