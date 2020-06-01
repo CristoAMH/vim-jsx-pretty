@@ -121,8 +121,10 @@ exe 'syntax match jsxComponentName
       \ ' .(s:highlight_close_tag ? 'transparent' : '')
 
 " MyComponent.PropType
- syntax match componentNamePropTypes +[A-Z][A-Za-z0-9]*\ze.propTypes+
- syntax match objectProperties +\v(<[a-z][A-Za-z]*)*\.([a-z]\w*)>\(@!+
+ syntax match classObject +\<[A-Z][A-Za-z0-9]*\ze\.+
+ syntax match objectPropertiesChain +\v(<[a-z][A-Za-z]*)*\.([a-z]\w*)>\(@!+
+ syntax match objectHighlight +\v\zs\{.*\}+
+ syntax match objectProperies +\v<[a-z]\w*:\ze\s+ containedin=objectHighlight
 " <tag key={this.props.key}>
 "  ~~~
 exe 'syntax match jsxTagName
